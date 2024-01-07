@@ -1,0 +1,57 @@
+<h2 id="first">Add Expenses</h2>
+<!-- {{ data1 |json }} -->
+<div id="form1">
+<form #expenseform ="ngForm" (ngSubmit)="saveForm(expenseform.value)">
+  <div class="form-group">
+    <label for="houserent">HouseRent</label>
+    <input placeholder="Enter Houserent"    type="number" id="houserent" class="form=control" name="houserent" [(ngModel)]="houserent" #houserentInput="ngModel" required />
+    <!-- {{data1.houserent}} -->
+    <!-- <div *ngIf="houserentInput.errors?.['required']">HouseRent is required</div> -->
+    <div [hidden]="houserentInput.valid || houserentInput.untouched">HouseRent is required</div>
+  </div>
+  <div class="form-group">
+    <label for="electricity">Electricity</label>
+    <input placeholder="Enter ElectricityBill" type="number" id="electricity" class="form=control" name="electricity" [(ngModel)]="electricity" #electricityInput="ngModel" required />
+    <div [hidden]="electricityInput.valid || electricityInput.untouched">ElectricityBill is required</div>
+  </div>
+  <div class="form-group">
+    <label for="travel">Travel</label>
+    <input placeholder="Enter TravelBill" type="number" id="travel" class="form=control" name="travel" [(ngModel)]="travel" #travelInput="ngModel" required />
+    <div [hidden]="travelInput.valid || travelInput.untouched">TravelBill is required</div>
+  </div>
+  <div class="form-group">
+    <label for="food">Food Amount</label>
+    <input placeholder="Enter FoodBill" type="number" id="food" class="form=control" name="food" [(ngModel)]="food" #foodInput="ngModel" required />
+    <div [hidden]="foodInput.valid || foodInput.untouched">FoodBill is required</div>
+  </div>
+  <div class="form-group">
+    <label for="other">Other Expenses</label>
+    <input placeholder="Enter Otherexpenses" type="number" id="other" class="form=control" name="other" [(ngModel)]="other" #otherInput="ngModel" required />
+    <div [hidden]="otherInput.valid || otherInput.untouched ">OtherExpenses is required</div>
+  </div>
+  <div class="form-group">
+    <label for="date">Date</label>
+    
+    <input type="date" id="date" class="form=control" name="date" [(ngModel)]="date" #dateInput="ngModel" required />
+    <div class = "error" [hidden]="dateInput.valid || dateInput.untouched">Date is required</div>
+  </div>
+ 
+
+<button class="button1" [disabled]="!expenseform.valid" type="submit">Save Expenses</button>
+
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

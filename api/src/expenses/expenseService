@@ -1,0 +1,27 @@
+var expenseModel = require('./expenseModel');
+// var key = '123456789trytrytry';
+// var encryptor = require('simple-encryptor')(key);
+
+module.exports.createexpensedbservice = (expensedetails) => {
+    return new Promise(function myfn(resolve, reject) {
+        var expensemodeldata = new expenseModel();
+
+        expensemodeldata.houserent = expensedetails.houserent;
+        expensemodeldata.electricity = expensedetails.electricity;
+        expensemodeldata.travel = expensedetails.travel;
+        expensemodeldata.food = expensedetails.food;
+        expensemodeldata.other = expensedetails.other;
+        expensemodeldata.date = expensedetails.date;
+        //var encrypted = encryptor.encrypt(userdetails.)
+        expensemodeldata.save()
+            .then(result => {
+                resolve(true);
+            })
+            .catch(err => {
+                reject(false);
+            });
+
+        
+
+    })
+}

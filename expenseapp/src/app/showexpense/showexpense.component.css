@@ -1,0 +1,14 @@
+.tablehead{
+    background-color: cyan;
+    font-size: 25px;
+   margin: 10% 30%;
+   width: 100%;
+   color:coral;
+   border-radius:5px;
+/* padding:10px 50px 20px; */
+margin:2% 30% 10% 10%;
+display: block;
+margin-bottom: 10px; 
+font-family: Arial, Helvetica, sans-serif;
+border-spacing: 20px 0px;
+}

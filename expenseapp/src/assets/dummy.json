@@ -1,0 +1,20 @@
+[
+    {
+        "ExpenseDate" : "2023-12-01",
+        "HouseRent"    :100,
+        "ElectricityBill":300,
+        "FoodBill":200,
+        "TravelBill":300,
+        "OtherAmount":400
+
+     },
+     {
+        "ExpenseDate" : "2023-06-01",
+        "HouseRent"    :300,
+        "ElectricityBill":300,
+        "FoodBill":400,
+        "TravelBill":400,
+        "OtherAmount":500
+
+     }
+]

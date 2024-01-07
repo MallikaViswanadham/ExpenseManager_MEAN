@@ -1,0 +1,32 @@
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+var expenseSchema = new Schema({
+
+    houserent :{
+        type : Number,
+        required : true
+    },
+    electricity:{
+        type: Number,
+        required: true
+    },
+    travel:{
+        type: Number,
+        required: true
+    },
+    food: {
+        type: Number,
+        required: true
+    },
+    other: {
+        type: Number,
+        required: true
+    },
+    date: {
+        type: Date,
+        required: true
+    }
+});
+
+module.exports = mongoose.model('expenses',expenseSchema);

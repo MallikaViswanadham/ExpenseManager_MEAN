@@ -1,0 +1,22 @@
+var addexpenseservice = require('./expenseService');
+
+var createaddexpense = async(req, res)=>
+{
+    try{
+        console.log(req.body);
+        var status = await addexpenseservice.createexpensedbservice(req.body);
+        console.log(status);
+        if(status){
+            res.send({"status":true,"message":"expenses created successfully"});
+
+        }else{
+            res.send({"status":false,"message":"error creating expenses"})
+
+        }
+    }
+    catch(err)
+    {
+        console.log(err);
+    }
+}
+module.exports ={ createaddexpense};

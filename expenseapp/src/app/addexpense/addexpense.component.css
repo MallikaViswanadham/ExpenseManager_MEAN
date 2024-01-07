@@ -1,0 +1,88 @@
+#form1{
+    background-color: #deb887;
+    font-size: 20px;
+    /* margin:2% 40% 4% 5%; */
+border-radius:5px;
+padding:10px 50px 20px;
+margin:2% 30% 30% 10%;
+display: block;
+margin-bottom: 10px; 
+width: 30%; 
+}
+#first{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.button1{
+    /* background-color: red; */
+   border: none;
+   color: white;
+   padding: 15px;
+   text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+
+}
+label{
+    color: blue;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.button1:enabled{
+    background-color: green;
+}
+.button1:disabled{
+    background-color:gray;
+}
+#first{
+    margin-left: 350px;
+    margin-top: 40px;
+}
+input{
+    /* border-radius: 0 2em; */
+  padding: 0 10px;
+  font-size:15px;
+  width: 50%;
+  border: none;
+  line-height: 2em;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+textarea{
+    width:300px;
+    padding:10px;
+    border:3px solid #e1e1e1;
+    height:100px;
+    margin-bottom:25px
+}
+input#houserent{
+        margin-left:52px;
+        
+ }
+ input#electricity{
+    margin-left:67px;
+    
+}
+input#food{
+    margin-left:35px
+}
+input#other{
+    margin-left:10px
+}
+input#travel{
+    margin-left:100px
+}
+input#date{
+    margin-left:110px
+}
+.houserent{
+    margin-left:50px;
+    padding: 0 10px;
+}
+.error{
+    color: red;
+    /* padding:0px 50px 20px 70px; */
+    margin-left:110px
+}

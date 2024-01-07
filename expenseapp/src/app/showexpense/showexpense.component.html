@@ -1,0 +1,22 @@
+<table  class="tablehead" >
+    <thead >
+        <th>ExpenseDate  </th>
+        <th>HouseRent  </th>
+        <th>ElectricityBill  </th>
+        <th>FoodBill  </th>
+        <th>TravelAmount  </th>
+        <th>OtherAmount  </th>
+        <th>TotalExpensesOfTheDay  </th>
+    </thead>
+    <tbody >
+        <tr  *ngFor="let expense of data1">
+            <td>{{expense.date}}</td>
+            <td>{{expense.houserent}}</td>
+            <td>{{expense.electricity}}</td>
+            <td>{{expense.travel}}</td>
+            <td>{{expense.food}}</td>
+            <td>{{expense.other}}</td>
+             <td>{{expense.houserent + expense.electricity+ expense.food+ expense.travel+ expense.other}}</td> 
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,46 @@
+<div class="show">
+<form #dateform ="ngForm" (ngSubmit)="saveForm(dateform.value)">
+<div class="form-group">
+<label for="start" class="start">Select Start Date</label>
+<input type="date" name="start" class="form-control" id="start1" [(ngModel)]="data.start" #startinput ="ngModel" required />
+<!-- {{data.start}} -->
+<div [hidden]="startinput.valid || startinput.untouched">StartDate is required</div>
+<br>
+</div>
+<div class="form-group">
+<label for="end" id="end">Select End Date</label>
+<input type="date" name="end" class="form-control" id="end1" [(ngModel)]="data.end" #endinput ="ngModel" required/>
+<!-- {{data.end}} -->
+<div [hidden]="endinput.valid || endinput.untouched">EndDate is required</div>
+
+<br>
+</div>
+<input type="submit" [disabled]="!dateform.valid" class="button2" (click)="ShowExpense()" >
+</form>
+</div>
+
+<table *ngIf="displaystatus" class="tablehead">
+    <thead >
+        <th>ExpenseDate  </th>
+        <th>HouseRent  </th>
+        <th>ElectricityBill  </th>
+        <th>FoodBill  </th>
+        <th>TravelAmount  </th>
+        <th>OtherAmount  </th>
+        <th>TotalExpensesOfTheDay  </th>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let expense of data3">
+           <ng-container *ngIf="expense.date >= data.start && expense.date <= data.end"><td>{{expense.date}}</td>
+            <td>{{expense.houserent}}</td>
+            <td>{{expense.electricity}}</td>
+            <td>{{expense.food}}</td>
+            <td>{{expense.travel}}</td>
+            <td>{{expense.other}}</td>
+            <td>{{expense.houserent + expense.electricity+ expense.food+ expense.travel+ expense.other}}</td>
+            </ng-container>
+        </tr>
+    </tbody>
+</table>
+
+
